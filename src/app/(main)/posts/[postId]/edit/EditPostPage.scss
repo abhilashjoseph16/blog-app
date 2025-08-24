@@ -1,0 +1,30 @@
+.edit-post-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141a69 0%, #6e2375 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  box-sizing: border-box;
+
+  .edit-post-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .edit-page-title {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .edit-error {
+      color: #ff6b6b;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+}

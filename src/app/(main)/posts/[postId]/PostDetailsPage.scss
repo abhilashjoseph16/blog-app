@@ -1,0 +1,190 @@
+.post-details-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141a69 0%, #6e2375 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  box-sizing: border-box;
+
+  .post-details-container {
+    width: 100%;
+    max-width: 600px;
+
+    .post-card {
+      background: #1e1e2f;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .post-author {
+          font-weight: 600;
+          color: #fff;
+          font-size: 14px;
+        }
+
+        .post-actions {
+          display: flex;
+          gap: 8px;
+
+          .edit-btn,
+          .delete-btn {
+            padding: 4px 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+          }
+
+          .edit-btn {
+            background: #0070f3;
+            &:hover {
+              background: #0059c1;
+            }
+          }
+
+          .delete-btn {
+            background: #ff4d4f;
+            &:hover {
+              background: #c70000;
+            }
+          }
+        }
+      }
+
+      .post-title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .post-content {
+        color: #ececec;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .comments-toggle {
+        margin: 8px 0;
+
+        .toggle-comments-btn {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 12px;
+          border-radius: 12px;
+          border: none;
+          background: #0070f3;
+          color: #fff;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background 0.2s;
+
+          &:hover {
+            background: #0059c1;
+          }
+
+          svg {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .comments-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .comments-list {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .comment-card {
+            background: #2c2c3e;
+            padding: 8px 12px;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 14px;
+          }
+
+          .no-comments {
+            color: #ccc;
+            font-size: 14px;
+            font-style: italic;
+          }
+        }
+
+        .add-comment-form {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .comment-input {
+            padding: 8px 12px;
+            border-radius: 12px;
+            border: 1px solid #555;
+            background: #2c2c3e;
+            color: #fff;
+            resize: vertical;
+            min-height: 60px;
+
+            &:focus {
+              outline: none;
+              border-color: #0070f3;
+              box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.3);
+            }
+          }
+
+          .comment-btn {
+            align-self: flex-end;
+            padding: 6px 16px;
+            border-radius: 12px;
+            border: none;
+            background: #0070f3;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+
+            &:hover {
+              background: #0059c1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .post-details-page {
+    padding: 16px;
+
+    .post-card {
+      padding: 16px;
+
+      .comment-input {
+        min-height: 50px;
+      }
+
+      .comments-toggle {
+        .toggle-comments-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

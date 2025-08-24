@@ -1,0 +1,132 @@
+.comment-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #2c2c3e;
+  padding: 8px 12px;
+  border-radius: 12px;
+
+  &.editing {
+    background: #3a3a55;
+  }
+
+  .comment-avatar {
+    color: #0070f3;
+  }
+
+  .comment-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .comment-author {
+      font-weight: 600;
+      font-size: 13px;
+      color: #fff;
+    }
+
+    .comment-text {
+      font-size: 14px;
+      color: #ececec;
+    }
+
+    .comment-actions {
+      display: flex;
+      gap: 8px;
+
+      .edit-comment-btn,
+      .save-comment-btn,
+      .cancel-comment-btn,
+      .delete-comment-btn {
+        padding: 4px 10px;
+        border-radius: 8px;
+        border: none;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .edit-comment-btn {
+        background: #0070f3;
+        color: #fff;
+        &:hover {
+          background: #0059c1;
+        }
+      }
+
+      .save-comment-btn {
+        background: #28a745;
+        color: #fff;
+        &:hover {
+          background: #218838;
+        }
+      }
+
+      .cancel-comment-btn {
+        background: #555;
+        color: #fff;
+        &:hover {
+          background: #777;
+        }
+      }
+
+      .delete-comment-btn {
+        background: #ff4d4f;
+        color: #fff;
+        &:hover {
+          background: #d9363e;
+        }
+      }
+    }
+
+    textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid #555;
+      background: #2c2c3e;
+      color: #fff;
+      font-size: 14px;
+      resize: vertical;
+      min-height: 60px;
+
+      &:focus {
+        outline: none;
+        border-color: #0070f3;
+        box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.3);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .comment-card {
+    padding: 6px 10px;
+
+    .comment-content {
+      .comment-author {
+        font-size: 12px;
+      }
+      .comment-text {
+        font-size: 13px;
+      }
+
+      .comment-actions {
+        flex-direction: column;
+        gap: 4px;
+
+        .edit-comment-btn,
+        .save-comment-btn,
+        .cancel-comment-btn,
+        .delete-comment-btn {
+          width: 100%;
+        }
+      }
+
+      textarea {
+        min-height: 50px;
+      }
+    }
+  }
+}

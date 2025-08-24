@@ -1,0 +1,124 @@
+.register-page-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #141a69 0%, #6e2375 100%);
+  padding: 16px;
+
+  .register-page_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    border-radius: 16px;
+    background: #1e1e2f;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    width: 400px;
+    max-width: 100%;
+
+    .register-page_title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 14px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #ececec;
+        }
+
+        input {
+          height: 42px;
+          padding: 0 12px;
+          border-radius: 8px;
+          border: 1px solid #ccc;
+          font-size: 15px;
+
+          &:focus {
+            outline: none;
+            border-color: #0070f3;
+            box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.3);
+          }
+        }
+      }
+
+      button {
+        margin-top: 8px;
+        height: 42px;
+        border-radius: 8px;
+        border: none;
+        background: #0070f3;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out;
+
+        &:hover {
+          background: #0059c1;
+        }
+      }
+    }
+
+    .login-link {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #ccc;
+      text-align: center;
+
+      .login-link-btn {
+        color: #00bfff;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:hover {
+          color: #0090c1;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .register-page_card {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .register-page_title {
+      font-size: 18px;
+    }
+
+    form {
+      gap: 10px;
+
+      input {
+        font-size: 14px;
+        height: 38px;
+      }
+
+      button {
+        font-size: 14px;
+        height: 38px;
+      }
+    }
+
+    .login-link {
+      font-size: 12px;
+    }
+  }
+}
