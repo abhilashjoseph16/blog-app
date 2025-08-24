@@ -93,6 +93,17 @@ The app is deployed on Vercel. To deploy your own version:
 
 ---
 
+## URL
+
+- `/home` - Home Page
+- `/profile` - Profile Page
+- `/posts/create` - Create Post Page
+- `/blog` - Public Blog Listing Page
+- `/login` - Login Page
+- `/register` - Register Page
+
+---
+
 ## Contribution
 
 Contributions are welcome! Please open issues or submit pull requests for bug fixes and feature requests.
